@@ -1,0 +1,8 @@
+[Mã câu hỏi (qCode): nbLdRpae].  
+Một chương trình server cho phép kết nối qua giao thức TCP tại cổng 2206 (thời gian giao tiếp tối đa cho mỗi yêu cầu là 5s). Yêu cầu là xây dựng một chương trình client thực hiện kết nối tới server sử dụng các luồng byte (InputStream/OutputStream) để trao đổi thông tin theo thứ tự:
+    a. Gửi mã sinh viên và mã câu hỏi theo định dạng "studentCode;qCode". Ví dụ: "B16DCCN999;10048F28".
+    b. Nhận chuỗi ký tự từ server. Ví dụ: "abcabcbb"
+    c. Tìm và gửi lên server chuỗi con dài nhất từ chuỗi nhận được mà không có ký tự lặp lại theo format "longestsubstring;length". Ví dụ: "abc;3".
+    d. Đóng kết nối và kết thúc chương trình.
+
+Ở đây là xâu không phải ký tự lặp lại cạnh nhau mà xâu chỉ chứa ký tự xuất hiện 1 lần đề bài chả nói rõ gì cả clm
