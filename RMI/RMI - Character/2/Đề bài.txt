@@ -1,0 +1,16 @@
+[Mã câu hỏi (qCode): R3wG9kWP].  Một chương trình (tạm gọi là RMI Server) cung cấp giao diện cho phép triệu gọi từ xa để xử lý chuỗi.
+Giao diện từ xa:
+public interface CharacterService extends Remote {
+public String requestCharacter(String studentCode, String qCode) throws RemoteException;
+public void submitCharacter(String studentCode, String qCode, String strSubmit) throws RemoteException;
+}
+Trong đó:
+• Interface CharacterService được viết trong package RMI.
+• Đối tượng cài đặt giao diện từ xa CharacterService được đăng ký với RegistryServer với tên là: RMICharacterService.
+Yêu cầu: Viết chương trình tại máy trạm (RMI client) để thực hiện các công việc sau với chuỗi được nhận từ RMI Server:
+a. Triệu gọi phương thức requestCharacter để nhận chuỗi ngẫu nhiên từ server với định dạng: "Chuỗi số La Mã đầu vào".
+b. Thực hiện chuyển đổi chuỗi số La Mã nhận được thành số thập phân (Decimal).
+Quy tắc chuyển đổi: Các ký tự La Mã chính bao gồm: I=1, V=5, X=10, L=50, C=100, D=500, M=1000.
+    Ví dụ: "MCMXCIV" -> 1994.
+c. Triệu gọi phương thức submitCharacter để gửi số thập phân đã chuyển đổi trở lại server.
+d. Kết thúc chương trình client.

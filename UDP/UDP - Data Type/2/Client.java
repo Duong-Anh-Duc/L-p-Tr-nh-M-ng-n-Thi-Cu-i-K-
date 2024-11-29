@@ -10,7 +10,6 @@ public class Client {
          DatagramPacket dp1 = new DatagramPacket(read, read.length);
          socket.receive(dp1);
          String res = new String(dp1.getData(), 0, dp1.getLength());
-         System.out.println(res);
          String result = res.split(";")[0] + ";";
          int n = Integer.parseInt(res.split(";")[1]);
          String arr[] = res.split(";")[2].split(",");

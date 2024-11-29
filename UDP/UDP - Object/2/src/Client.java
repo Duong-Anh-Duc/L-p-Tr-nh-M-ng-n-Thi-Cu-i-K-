@@ -15,11 +15,9 @@ public class Client {
          DatagramPacket dp1 = new DatagramPacket(read, read.length);
          socket.receive(dp1);
          String id = new String(dp1.getData(), 0, 8);
-         System.out.println(id);
          ByteArrayInputStream bais = new ByteArrayInputStream(dp1.getData(), 8, dp1.getLength() - 8);
          ObjectInputStream ois = new ObjectInputStream(bais);
          Student student = (Student) ois.readObject();
-         System.out.println(student);
          String arr[] = student.getName().split(" ");
          String name = "";
          for(int i = 0 ; i < arr.length;i++){

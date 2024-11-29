@@ -1,0 +1,5 @@
+[Mã câu hỏi (qCode): WE4akGMM].  Một chương trình máy chủ cho phép kết nối qua TCP tại cổng 2207 (hỗ trợ thời gian liên lạc tối đa cho mỗi yêu cầu là 5s). Yêu cầu là xây dựng chương trình client tương tác với server trên bằng các byte stream (DataInputStream/DataOutputStream) để trao đổi thông tin theo trình tự sau:
+a. Gửi một chuỗi chứa mã sinh viên và mã câu hỏi ở định dạng "studentCode;qCode". Ví dụ: "B15DCCN999;B1F1FDCD"
+b. Nhận hai số nguyên a và b tương ứng từ máy chủ
+c. Tính ước chung lớn nhất, bội chung nhỏ nhất, tổng, tích. Gửi từng giá trị số nguyên theo thứ tự trên đến máy chủ.
+d. Đóng kết nối và kết thúc chương trình.
