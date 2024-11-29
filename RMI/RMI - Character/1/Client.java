@@ -2,7 +2,6 @@
 package RMI;
 
 import java.rmi.registry.*;
-import RMI.CharacterService;
 
 public class Client {
     public static void main(String[] args) throws Exception {
@@ -15,7 +14,6 @@ public class Client {
         for (int i = 0; i < word.length(); i++) {
             result += (char) (word.charAt(i) ^ key.charAt(i % key.length()));
         }
-        System.out.println(result);
         cs.submitCharacter("B21DCCN239", "aTnXjI8V", result);
     }
 }

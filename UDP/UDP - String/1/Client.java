@@ -24,7 +24,6 @@ public class Client {
                 cnt[x] = 0;
             }
         }
-        System.out.println(result);
         socket.send(new DatagramPacket(result.getBytes(), 0, result.length(), InetAddress.getByName("203.162.10.109"),
                 2208));
     }
