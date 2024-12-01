@@ -1,0 +1,9 @@
+[Mã câu hỏi (qCode): XEg4gPk4].  Mật mã caesar, còn gọi là mật mã dịch chuyển, để giải mã thì mỗi ký tự nhận được sẽ được thay thế bằng một ký tự cách nó một đoạn s. Ví dụ: với s = 3 thì ký tự “A” sẽ được thay thế bằng ký tự “D”.
+Một chương trình server cho phép giao tiếp qua giao thức UDP tại cổng 2207. Yêu cầu xây dựng chương trình client trao đổi thông tin với server theo kịch bản mô tả dưới đây:
+a.	Gửi thông điệp là một chuỗi chứa mã sinh viên và mã câu hỏi theo định dạng ";studentCode;qCode". Ví dụ: ";B15DCCN001;825EE3A7"
+b.	Nhận thông điệp là một chuỗi từ server theo định dạng "requestId;strEncode;s".
+•	requestId là chuỗi ngẫu nhiên duy nhất
+•	strEncode là chuỗi thông điệp bị mã hóa
+•	s là số nguyên chứa giá trị độ dịch của mã
+c.	Giải mã tìm thông điệp ban đầu và gửi lên server theo định dạng “requestId;strDecode”
+d.	Đóng socket và kết thúc chương trình.
