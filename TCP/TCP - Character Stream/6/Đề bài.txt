@@ -1,0 +1,11 @@
+[Mã câu hỏi (qCode): 1LmbodfN].  Một chương trình server cho phép kết nối qua giao thức TCP tại cổng 2208 (hỗ trợ thời gian giao tiếp tối đa cho mỗi yêu cầu là 5 giây). Yêu cầu là xây dựng một chương trình client thực hiện kết nối tới server và sử dụng luồng ký tự (BufferedWriter/BufferedReader) để trao đổi thông tin theo kịch bản sau:
+a. Gửi một chuỗi gồm mã sinh viên và mã câu hỏi với định dạng "studentCode;qCode". Ví dụ: "B15DCCN999;A1B2C3D4".
+b. Nhận từ server một chuỗi ngẫu nhiên.
+c. Xử lý chuỗi đã nhận theo các bước sau:
+    Bước 1: Tìm từ dài nhất trong trong chuỗi ngẫu nhiên (từ là chuỗi con phân tách bởi khoảng trắng).
+    Bước 2: Xác định vị trí bắt đầu của từ dài nhất đó trong chuỗi ban đầu.
+d. Gửi lần lượt hai giá trị lên server:
+   - Từ dài nhất xuất hiện trong chuỗi.
+   - Vị trí bắt đầu của từ trong chuỗi ban đầu.
+
+e. Đóng kết nối và kết thúc chương trình.
