@@ -1,0 +1,7 @@
+[Mã câu hỏi (qCode): V137Wpha].  Một dịch vụ web được định nghĩa và mô tả trong tệp CharacterService.wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/CharacterService?wsdl để xử lý các bài toán về chuỗi và ký tự.
+Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với CharacterService thực hiện các công việc sau:
+a. Triệu gọi phương thức requestStringArray với tham số đầu vào là mã sinh viên (studentCode) và mã câu hỏi (qCode) để nhận về một mảng chuỗi (String[]) từ server.
+b. Sắp xếp mảng theo độ dài của từ theo thứ tự tăng dần độ dài của từ.
+c. Triệu gọi phương thức submitCharacterStringArray(String studentCode, String qCode, String[] data) để gửi mảng chuỗi đã sắp xếp trở lại server.
+Ví dụ: Nếu mảng chuỗi nhận được từ phương thức requestCharacter là ["apple", "banana", "fig", "pineapple"] mảng sắp xếp tăng dần theo độ dài sẽ là ["fig", "apple", "banana", "pineapple"].
+d. Kết thúc chương trình client.
