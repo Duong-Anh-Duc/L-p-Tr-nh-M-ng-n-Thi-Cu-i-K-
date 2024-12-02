@@ -7,12 +7,12 @@ public class Ticket implements Serializable {
     private String id;
     private String eventName;
     private String saleDate;
-    private String ticket;
+    private String ticketCode;
     public Ticket() {
         this.id = "";
         this.eventName = "";
         this.saleDate = "";
-        this.ticket = "";
+        this.ticketCode = "";
     }
 
     public Ticket(String id, String eventName, String saleDate) {
@@ -46,16 +46,16 @@ public class Ticket implements Serializable {
     }
 
     public String getTicket() {
-        return ticket;
+        return ticketCode;
     }
 
-    public void setTicket(String ticket) {
-        this.ticket = ticket;
+    public void setTicket(String ticketCode) {
+        this.ticketCode = ticketCode;
     }
 
     @Override
     public String toString() {
-        return "Ticket{" + "id=" + id + ", eventName=" + eventName + ", saleDate=" + saleDate + ", ticket=" + ticket + '}';
+        return "Ticket{" + "id=" + id + ", eventName=" + eventName + ", saleDate=" + saleDate + ", ticket=" + ticketCode + '}';
     }
     
 }

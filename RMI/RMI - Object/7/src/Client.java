@@ -5,7 +5,8 @@ public class Client {
     public static void main(String[] args) throws Exception {
         Registry registry = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ObjectService os = (ObjectService) registry.lookup("RMIObjectService");
-        Ticket ticket = (Ticket) os.requestObject("B21DCCN036", "oVD0lfi2");
+        Ticket ticket = (Ticket) os.requestObject("B21DCCN319", "KxwBnSqq");
+        System.out.println(ticket);
         String code = "";
         code += ticket.getEventName().toUpperCase().charAt(0);
         code += ticket.getEventName().toUpperCase().charAt(ticket.getEventName().length() - 1);
@@ -29,8 +30,8 @@ public class Client {
                 break;
             }
         }
-        System.out.println(code);
         ticket.setTicket(code);
-        os.submitObject("B21DCCN036", "oVD0lfi2", 123);
+        System.out.println(ticket);
+        os.submitObject("B21DCCN319", "KxwBnSqq", ticket);
     }
 }
