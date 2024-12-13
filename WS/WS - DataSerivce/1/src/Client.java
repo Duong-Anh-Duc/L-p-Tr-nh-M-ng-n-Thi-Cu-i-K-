@@ -13,12 +13,10 @@ public class Client {
         DataService_Service dataService_Service = new DataService_Service();
         DataService dataService = dataService_Service.getDataServicePort();
         List<Integer> a = dataService.getData("B21DCCN239", "mYuaqugS");
-        System.out.println(a);
         ArrayList<String> result = new ArrayList<>();
         for (int i = 0; i < a.size(); i++) {
             result.add(Integer.toBinaryString(a.get(i)));
         }
-        System.out.println(result);
         dataService.submitDataStringArray("B21DCCN239", "mYuaqugS", result);
 
     }

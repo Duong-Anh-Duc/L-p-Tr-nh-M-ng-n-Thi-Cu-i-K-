@@ -33,7 +33,6 @@ public class Client {
             }
         }
         result = result.substring(0, result.length() - 1);
-        System.out.println(result);
         socket.send(
                 new DatagramPacket(result.getBytes(), result.length(), InetAddress.getByName("203.162.10.109"), 2207));
     }

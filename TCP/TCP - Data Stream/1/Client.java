@@ -12,7 +12,6 @@ public class Client {
         dos.flush();
         String res = dis.readUTF();
         int s = dis.readInt();
-        System.out.println(s);
         String result = "";
         for (char x : res.toCharArray()) {
             if (!Character.isLowerCase(x)) {
@@ -21,7 +20,6 @@ public class Client {
                 result += (char) ((x + s - 'a') % 26 + 'a');
             }
         }
-        System.out.println(result);
         dos.writeUTF(result);
         dos.flush();
     }

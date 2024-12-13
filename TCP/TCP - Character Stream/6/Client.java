@@ -1,9 +1,11 @@
 package src;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
+
 public class Client {
     public static void main(String[] args) throws Exception {
         Socket socket = new Socket("203.162.10.109", 2208);
@@ -13,31 +15,28 @@ public class Client {
         bw.newLine();
         bw.flush();
         String res = br.readLine();
-        System.out.println(res);
-        String arr[] =res.split(" ");
+        String arr[] = res.split(" ");
         String word = "";
         int index = 0;
         int max = -99;
-        for(int i = 0 ; i < arr.length;i++){
-          if(max < arr[i].length()){
-              max = arr[i].length();
-              word = arr[i];
-          }
+        for (int i = 0; i < arr.length; i++) {
+            if (max < arr[i].length()) {
+                max = arr[i].length();
+                word = arr[i];
+            }
         }
         res += ' ';
         String tmp = "";
-        for(int i = 0 ; i < res.length();i++){
-            if(res.charAt(i) == ' '){
-                if(tmp.equals(word)){
+        for (int i = 0; i < res.length(); i++) {
+            if (res.charAt(i) == ' ') {
+                if (tmp.equals(word)) {
                     index = i - tmp.length();
                 }
                 tmp = "";
-            }
-            else{
+            } else {
                 tmp += res.charAt(i);
             }
         }
-        System.out.println(word + " " + (index));
         bw.write(word);
         bw.newLine();
         bw.write(Integer.toString(index));

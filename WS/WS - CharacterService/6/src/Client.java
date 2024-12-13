@@ -11,7 +11,6 @@ public class Client {
         CharacterService_Service service = new CharacterService_Service();
         CharacterService characterService = service.getCharacterServicePort();
         List<Integer> a = characterService.requestCharacter("B21DCCN467", "y0rzRpF7");
-        System.out.println(a);
         Collections.sort(a);
         characterService.submitCharacterCharArray("B21DCCN467", "y0rzRpF7", a);
     }

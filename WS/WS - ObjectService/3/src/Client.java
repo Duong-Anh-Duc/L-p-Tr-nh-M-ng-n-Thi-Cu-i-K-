@@ -26,7 +26,6 @@ public class Client {
                 map.put(x.getCustomerId(), map.get(x.getCustomerId()) + x.getAmount());
             }
             if (max_cost < map.get(x.getCustomerId())) {
-                System.out.println("ok");
                 id = x.getCustomerId();
                 max_cost = map.get(x.getCustomerId());
             }
