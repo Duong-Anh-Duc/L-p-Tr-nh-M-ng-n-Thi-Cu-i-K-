@@ -1,0 +1,7 @@
+[Mã câu hỏi (qCode): 4iyFyXaI].  Một dịch vụ web được định nghĩa và mô tả trong tệp DataService?wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/DataService?wsdl để xử lý các bài toán với dữ liệu nguyên thủy.
+Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với DataService thực hiện các công việc sau:
+a. Triệu gọi phương thức getData với tham số đầu vào là mã sinh viên (studentCode) và mã câu hỏi (qCode) để nhận về một danh sách số nguyên (List<Integer>) từ server.
+b. Sắp xếp lại mảng số nguyên nhận được sao cho phần tử chẵn và lẻ xen kẽ nhau theo thứ tự xuất hiện. Nếu không thể xen kẽ đều, các phần tử còn lại sẽ nối tiếp ở cuối mảng. Đảm bảo các phần tử chẵn ở vị trí đầu tiên trong mảng sắp xếp.
+c. Triệu gọi phương thức submitDataIntArray(String studentCode, String qCode, List<Integer> data) để gửi danh sách số nguyên đã sắp xếp theo thứ tự chẵn-lẻ xen kẽ trở lại server.
+Ví dụ: Nếu mảng số nguyên nhận được từ phương thức getData là [1, 2, 3, 4, 5, 6], sau khi sắp xếp xen kẽ chẵn-lẻ, mảng kết quả sẽ là [2, 1, 4, 3, 6, 5]. Mảng này sẽ được gửi lại server qua phương thức submitData.
+d. Kết thúc chương trình client.

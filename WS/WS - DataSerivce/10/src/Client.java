@@ -8,19 +8,14 @@ import vn.medianews.DataService;
 import vn.medianews.DataService_Service;
 
 public class Client {
-
     public static void main(String[] args) {
         DataService_Service dataService_Service = new DataService_Service();
         DataService dataService = dataService_Service.getDataServicePort();
-        List<Integer> a = dataService.getData("B21DCCN239", "mYuaqugS");
-        System.out.println(a);
-        ArrayList<String> result = new ArrayList<>();
-        for (int i = 0; i < a.size(); i++) {
-            result.add(Integer.toBinaryString(a.get(i)));
+        List<Integer> a = dataService.getData("B21DCCN025", "QBDJ1GGL");
+        List<String> result = new ArrayList<>();
+        for (int x : a) {
+            result.add(Integer.toOctalString(x) + "|" + Integer.toHexString(x).toUpperCase());
         }
-        System.out.println(result);
-        dataService.submitDataStringArray("B21DCCN239", "mYuaqugS", result);
-
+        dataService.submitDataStringArray("B21DCCN025", "QBDJ1GGL", result);
     }
-
 }

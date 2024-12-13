@@ -1,0 +1,7 @@
+[Mã câu hỏi (qCode): nhFjYg0F].  Một dịch vụ web được định nghĩa và mô tả trong tệp DataService?wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/DataService?wsdl để xử lý các bài toán với dữ liệu nguyên thủy.
+Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với DataService thực hiện các công việc sau:
+a. Triệu gọi phương thức getDataDouble với tham số đầu vào là mã sinh viên (studentCode) và mã câu hỏi (qCode) để nhận về một số thập phân (double) từ server.
+b. Lấy phần nguyên của số thập phân nhận được. Liệt kê tất cả các ước số của phần nguyên này và đếm số lượng ước số. Kết quả sẽ là một danh sách số nguyên, trong đó phần tử đầu tiên là số lượng ước số và các phần tử tiếp theo là các ước số theo thứ tự tăng dần.
+c. Triệu gọi phương thức submitDataIntArray(String studentCode, String qCode, List<Integer> data) để gửi danh sách kết quả chứa số lượng ước số và lần lượt các ước số trở lại server.
+Ví dụ: Nếu số nguyên nhận được từ phương thức getDataDouble là 12.69, các ước số là [1, 2, 3, 4, 6, 12], tổng số lượng ước là 6, nên danh sách gửi lại sẽ là [6, 1, 2, 3, 4, 6, 12].
+d. Kết thúc chương trình client.
