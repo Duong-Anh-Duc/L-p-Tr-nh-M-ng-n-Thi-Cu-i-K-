@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class RequestCharacterResponse {
 
-    @XmlElement(name = "return", nillable = true)
+    @XmlElement(name = "return", type = Integer.class)
     @XmlSchemaType(name = "unsignedShort")
     protected List<Integer> _return;
 

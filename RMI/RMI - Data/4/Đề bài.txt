@@ -1,4 +1,4 @@
-[Mã câu hỏi (qCode): AL72ppGp].  Một chương trình (tạm gọi là RMI Server) cung cấp giao diện cho phép triệu gọi từ xa để xử lý dữ liệu.
+[Mã câu hỏi (qCode): SLzGRAGX].  Một chương trình (tạm gọi là RMI Server) cung cấp giao diện cho phép triệu gọi từ xa để xử lý dữ liệu.
 Giao diện từ xa:
 public interface DataService extends Remote {
 public Object requestData(String studentCode, String qCode) throws RemoteException;

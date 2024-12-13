@@ -45,6 +45,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SubmitCharacterStringResponse }
+     * 
+     */
+    public SubmitCharacterStringResponse createSubmitCharacterStringResponse() {
+        return new SubmitCharacterStringResponse();
+    }
+
+    /**
      * Create an instance of {@link SubmitCharacterStringArrayResponse }
      * 
      */
@@ -77,11 +85,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubmitCharacterStringArray }
+     * Create an instance of {@link SubmitCharacterCharArray }
      * 
      */
-    public SubmitCharacterStringArray createSubmitCharacterStringArray() {
-        return new SubmitCharacterStringArray();
+    public SubmitCharacterCharArray createSubmitCharacterCharArray() {
+        return new SubmitCharacterCharArray();
     }
 
     /**
@@ -98,6 +106,30 @@ public class ObjectFactory {
      */
     public RequestStringResponse createRequestStringResponse() {
         return new RequestStringResponse();
+    }
+
+    /**
+     * Create an instance of {@link SubmitCharacterString }
+     * 
+     */
+    public SubmitCharacterString createSubmitCharacterString() {
+        return new SubmitCharacterString();
+    }
+
+    /**
+     * Create an instance of {@link SubmitCharacterCharArrayResponse }
+     * 
+     */
+    public SubmitCharacterCharArrayResponse createSubmitCharacterCharArrayResponse() {
+        return new SubmitCharacterCharArrayResponse();
+    }
+
+    /**
+     * Create an instance of {@link SubmitCharacterStringArray }
+     * 
+     */
+    public SubmitCharacterStringArray createSubmitCharacterStringArray() {
+        return new SubmitCharacterStringArray();
     }
 
     /**
@@ -127,21 +159,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubmitCharacterStringArrayResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubmitCharacterCharArrayResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://medianews.vn/", name = "submitCharacterCharArrayResponse")
-    public JAXBElement<SubmitCharacterStringArrayResponse> createSubmitCharacterCharArrayResponse(SubmitCharacterStringArrayResponse value) {
-        return new JAXBElement<SubmitCharacterStringArrayResponse>(_SubmitCharacterCharArrayResponse_QNAME, SubmitCharacterStringArrayResponse.class, null, value);
+    public JAXBElement<SubmitCharacterCharArrayResponse> createSubmitCharacterCharArrayResponse(SubmitCharacterCharArrayResponse value) {
+        return new JAXBElement<SubmitCharacterCharArrayResponse>(_SubmitCharacterCharArrayResponse_QNAME, SubmitCharacterCharArrayResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubmitCharacterStringArray }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubmitCharacterString }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://medianews.vn/", name = "submitCharacterString")
-    public JAXBElement<SubmitCharacterStringArray> createSubmitCharacterString(SubmitCharacterStringArray value) {
-        return new JAXBElement<SubmitCharacterStringArray>(_SubmitCharacterString_QNAME, SubmitCharacterStringArray.class, null, value);
+    public JAXBElement<SubmitCharacterString> createSubmitCharacterString(SubmitCharacterString value) {
+        return new JAXBElement<SubmitCharacterString>(_SubmitCharacterString_QNAME, SubmitCharacterString.class, null, value);
     }
 
     /**
@@ -172,12 +204,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubmitCharacterStringArray }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubmitCharacterCharArray }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://medianews.vn/", name = "submitCharacterCharArray")
-    public JAXBElement<SubmitCharacterStringArray> createSubmitCharacterCharArray(SubmitCharacterStringArray value) {
-        return new JAXBElement<SubmitCharacterStringArray>(_SubmitCharacterCharArray_QNAME, SubmitCharacterStringArray.class, null, value);
+    public JAXBElement<SubmitCharacterCharArray> createSubmitCharacterCharArray(SubmitCharacterCharArray value) {
+        return new JAXBElement<SubmitCharacterCharArray>(_SubmitCharacterCharArray_QNAME, SubmitCharacterCharArray.class, null, value);
     }
 
     /**
@@ -208,12 +240,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubmitCharacterStringArrayResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubmitCharacterStringResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://medianews.vn/", name = "submitCharacterStringResponse")
-    public JAXBElement<SubmitCharacterStringArrayResponse> createSubmitCharacterStringResponse(SubmitCharacterStringArrayResponse value) {
-        return new JAXBElement<SubmitCharacterStringArrayResponse>(_SubmitCharacterStringResponse_QNAME, SubmitCharacterStringArrayResponse.class, null, value);
+    public JAXBElement<SubmitCharacterStringResponse> createSubmitCharacterStringResponse(SubmitCharacterStringResponse value) {
+        return new JAXBElement<SubmitCharacterStringResponse>(_SubmitCharacterStringResponse_QNAME, SubmitCharacterStringResponse.class, null, value);
     }
 
 }

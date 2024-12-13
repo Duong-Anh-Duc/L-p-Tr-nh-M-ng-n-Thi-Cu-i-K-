@@ -45,21 +45,21 @@ public interface CharacterService {
 
     /**
      * 
-     * @param data
      * @param studentCode
      * @param qCode
+     * @return
+     *     returns java.util.List<java.lang.String>
      */
     @WebMethod
-    @RequestWrapper(localName = "submitCharacterString", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitCharacterStringArray")
-    @ResponseWrapper(localName = "submitCharacterStringResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitCharacterStringArrayResponse")
-    @Action(input = "http://medianews.vn/CharacterService/submitCharacterStringRequest", output = "http://medianews.vn/CharacterService/submitCharacterStringResponse")
-    public void submitCharacterString(
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "requestStringArray", targetNamespace = "http://medianews.vn/", className = "vn.medianews.RequestStringArray")
+    @ResponseWrapper(localName = "requestStringArrayResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.RequestStringArrayResponse")
+    @Action(input = "http://medianews.vn/CharacterService/requestStringArrayRequest", output = "http://medianews.vn/CharacterService/requestStringArrayResponse")
+    public List<String> requestStringArray(
         @WebParam(name = "studentCode", targetNamespace = "")
         String studentCode,
         @WebParam(name = "qCode", targetNamespace = "")
-        String qCode,
-        @WebParam(name = "data", targetNamespace = "")
-        List<String> data);
+        String qCode);
 
     /**
      * 
@@ -68,8 +68,8 @@ public interface CharacterService {
      * @param qCode
      */
     @WebMethod
-    @RequestWrapper(localName = "submitCharacterCharArray", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitCharacterStringArray")
-    @ResponseWrapper(localName = "submitCharacterCharArrayResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitCharacterStringArrayResponse")
+    @RequestWrapper(localName = "submitCharacterCharArray", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitCharacterCharArray")
+    @ResponseWrapper(localName = "submitCharacterCharArrayResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitCharacterCharArrayResponse")
     @Action(input = "http://medianews.vn/CharacterService/submitCharacterCharArrayRequest", output = "http://medianews.vn/CharacterService/submitCharacterCharArrayResponse")
     public void submitCharacterCharArray(
         @WebParam(name = "studentCode", targetNamespace = "")
@@ -77,25 +77,25 @@ public interface CharacterService {
         @WebParam(name = "qCode", targetNamespace = "")
         String qCode,
         @WebParam(name = "data", targetNamespace = "")
-        List<String> data);
+        List<Integer> data);
 
     /**
      * 
+     * @param data
      * @param studentCode
      * @param qCode
-     * @return
-     *     returns java.util.List<java.lang.Integer>
      */
     @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "requestCharacter", targetNamespace = "http://medianews.vn/", className = "vn.medianews.RequestCharacter")
-    @ResponseWrapper(localName = "requestCharacterResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.RequestCharacterResponse")
-    @Action(input = "http://medianews.vn/CharacterService/requestCharacterRequest", output = "http://medianews.vn/CharacterService/requestCharacterResponse")
-    public List<Integer> requestCharacter(
+    @RequestWrapper(localName = "submitCharacterString", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitCharacterString")
+    @ResponseWrapper(localName = "submitCharacterStringResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitCharacterStringResponse")
+    @Action(input = "http://medianews.vn/CharacterService/submitCharacterStringRequest", output = "http://medianews.vn/CharacterService/submitCharacterStringResponse")
+    public void submitCharacterString(
         @WebParam(name = "studentCode", targetNamespace = "")
         String studentCode,
         @WebParam(name = "qCode", targetNamespace = "")
-        String qCode);
+        String qCode,
+        @WebParam(name = "data", targetNamespace = "")
+        String data);
 
     /**
      * 
@@ -120,14 +120,14 @@ public interface CharacterService {
      * @param studentCode
      * @param qCode
      * @return
-     *     returns java.util.List<java.lang.String>
+     *     returns java.util.List<java.lang.Integer>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "requestStringArray", targetNamespace = "http://medianews.vn/", className = "vn.medianews.RequestStringArray")
-    @ResponseWrapper(localName = "requestStringArrayResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.RequestStringArrayResponse")
-    @Action(input = "http://medianews.vn/CharacterService/requestStringArrayRequest", output = "http://medianews.vn/CharacterService/requestStringArrayResponse")
-    public List<String> requestStringArray(
+    @RequestWrapper(localName = "requestCharacter", targetNamespace = "http://medianews.vn/", className = "vn.medianews.RequestCharacter")
+    @ResponseWrapper(localName = "requestCharacterResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.RequestCharacterResponse")
+    @Action(input = "http://medianews.vn/CharacterService/requestCharacterRequest", output = "http://medianews.vn/CharacterService/requestCharacterResponse")
+    public List<Integer> requestCharacter(
         @WebParam(name = "studentCode", targetNamespace = "")
         String studentCode,
         @WebParam(name = "qCode", targetNamespace = "")
