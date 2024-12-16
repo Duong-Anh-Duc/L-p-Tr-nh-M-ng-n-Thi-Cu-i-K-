@@ -1,23 +1,21 @@
 package src;
-
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-import vn.medianews.Customer;
-import vn.medianews.ObjectService;
-import vn.medianews.ObjectService_Service;
-
+import vn.medianews.*;
 public class Client {
+ 
     public static void main(String[] args) {
         ObjectService_Service objectService_Service = new ObjectService_Service();
         ObjectService objectService = objectService_Service.getObjectServicePort();
-        List<Customer> customer = objectService.requestListCustomer("B21DCCN440", "4zcxNMzo");
-        List<Customer> result = new ArrayList<>();
-        for (Customer x : customer) {
-            if (x.getTotalSpent() > 5000 && x.getPurchaseCount() > 5) {
-                result.add(x);
-            }
+        List<CustomerY> customerYs = objectService.requestListCustomerY("B21DCCN005", "aYiLQ3wo");
+        OffsetDateTime now = OffsetDateTime.now();
+        OffsetDateTime ago = now.minusMonths(6);
+        List<CustomerY> result = new ArrayList<>();
+        for(CustomerY x : customerYs){
+            if(x.getLastTransactionDate().toGregorianCalendar().toZonedDateTime().toOffsetDateTime().isAfter(ago) && x.getLastTransactionDate().toGregorianCalendar().toZonedDateTime().toOffsetDateTime().isBefore(now)) continue;
+            result.add(x);  
         }
-        objectService.submitListCustomer("B21DCCN440", "4zcxNMzo", result);
+        objectService.submitListCustomerY("B21DCCN005", "aYiLQ3wo", result);
     }
 }
