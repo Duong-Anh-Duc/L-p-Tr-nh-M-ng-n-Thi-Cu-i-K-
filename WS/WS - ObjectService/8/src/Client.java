@@ -1,13 +1,11 @@
 package src;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
 import vn.medianews.EmployeeY;
 import vn.medianews.ObjectService;
-import vn.medianews.ObjectService_Service;
 
 public class Client {
     public static void main(String[] args) {
@@ -17,8 +15,8 @@ public class Client {
         Collections.sort(employeeYs, new Comparator<EmployeeY>() {
             @Override
             public int compare(EmployeeY o1, EmployeeY o2) {
-                LocalDateTime time1 = o1.getStartDate().toGregorianCalendar().toZonedDateTime().toLocalDateTime();
-                LocalDateTime time2 = o2.getStartDate().toGregorianCalendar().toZonedDateTime().toLocalDateTime();
+                OffsetDateTime time1 = o1.getStartDate().toGregorianCalendar().toZonedDateTime().toOffsetDateTime();
+                OffsetDateTime time2 = o2.getStartDate().toGregorianCalendar().toZonedDateTime().toOffsetDateTime();
                 return time1.compareTo(time2);
             }
 
