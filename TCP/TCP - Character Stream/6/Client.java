@@ -11,7 +11,7 @@ public class Client {
         Socket socket = new Socket("203.162.10.109", 2208);
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-        bw.write("B21DCCN303;1LmbodfN");
+        bw.write("B21DCCN005;afvEER9o");
         bw.newLine();
         bw.flush();
         String res = br.readLine();
@@ -25,21 +25,9 @@ public class Client {
                 word = arr[i];
             }
         }
-        res += ' ';
-        String tmp = "";
-        for (int i = 0; i < res.length(); i++) {
-            if (res.charAt(i) == ' ') {
-                if (tmp.equals(word)) {
-                    index = i - tmp.length();
-                }
-                tmp = "";
-            } else {
-                tmp += res.charAt(i);
-            }
-        }
         bw.write(word);
         bw.newLine();
-        bw.write(Integer.toString(index));
+        bw.write(Integer.toString(res.indexOf(word)));
         bw.newLine();
         bw.flush();
     }
